@@ -17,6 +17,7 @@
   example-package = pkgs.callPackage ./pkgs/example-package { };
   easytier = pkgs.callPackage ./pkgs/easytier { };
   trzsz-ssh = pkgs.callPackage ./pkgs/trzsz-ssh { };
+  trzsz-go = pkgs.callPackage ./pkgs/trzsz-go { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }
