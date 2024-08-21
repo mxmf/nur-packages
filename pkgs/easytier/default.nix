@@ -10,14 +10,14 @@ rustPlatform.buildRustPackage rec {
   env.PROTOC = lib.getExe' protobuf "protoc";
 
   pname = "easytier";
-  version = "1.1.0";
+  version = "1.2.2";
 
   src = fetchCrate {
     inherit pname version;
-    hash = "sha256-kR9SlK5MDQhtQ+b9VZYXFdZ25DfsD45MOrk9NiyTAYE=";
+    hash = "sha256-D4Eu8uoFCNmnJ4LgQ8UXcb4YlapafmDzPs2drCD6VaM=";
   };
 
-  cargoHash = "sha256-LlJuvcNhj6/rRnl44B5Apix5FaJO7uzxHvsLBUgkJcA=";
+  cargoHash = "sha256-1s7tfhQGV1XjbGECXGWFVfl9qW+yUnP2TbZYNerLUrA=";
 
   meta = with lib; {
     description = "A simple, safe and decentralized VPN networking solution implemented with the Rust language and Tokio framework.";
