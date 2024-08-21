@@ -2,16 +2,16 @@
 
 buildGoModule rec {
   pname = "trzsz-go";
-  version = "1.1.7";
+  version = "1.1.8";
 
   src = fetchFromGitHub {
     owner = "trzsz";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-E9mp41bhBoRZCXFkLNn/ZV1XZeDf0KzbXOhVxt0bFF4=";
+    sha256 = "sha256-g1fbgKTFS9aPAmnTeFYoymrDEoZ6BtzUhA2Z9SNYbsU=";
   };
 
-  vendorHash = "sha256-XSVN2Qv3DXiAVZGxyCJoQoFKAPQMHp6j8f+MYfbOw/w=";
+  vendorHash = "sha256-AsrRHHBlzW5s/PtJSQ+hAgqUIYwDwoemQaerRV/QKX0=";
 
   doCheck = false;
 
