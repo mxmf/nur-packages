@@ -10,7 +10,7 @@ rustPlatform.buildRustPackage rec {
   env.PROTOC = lib.getExe' protobuf "protoc";
 
   pname = "EasyTier";
-  version = "2.0.2";
+  version = "2.0.3";
 
 
 
@@ -18,10 +18,10 @@ rustPlatform.buildRustPackage rec {
     owner = "EasyTier";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-pmX0vb87cTS0poo91FVP7qj+ZVSArqLb2JcdFFZ1B7g=";
+    sha256 = "sha256-0bS2VzddRZcFGmHugR0yXHjHqz06tpL4+IhQ6ReaU4Y=";
   };
 
-  cargoHash = "sha256-ZvUR6+5HL3Xg2qJnt0ytZwJOT/LOxBy/4PVYgN0ri0c=";
+  cargoHash = "sha256-TEARMO8/OK2GuXpkIkb7S05azYsV0/+ibnOq5BGRcOU=";
 
   meta = with lib; {
     description = "A simple, safe and decentralized VPN networking solution implemented with the Rust language and Tokio framework.";
