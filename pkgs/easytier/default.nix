@@ -22,8 +22,15 @@ rustPlatform.buildRustPackage rec {
   };
 
 
-  useFetchCargoVendor = true;
-  cargoHash = "sha256-/avdvHl7rfATGxHS5F1drK/J4pT+srX0+qRzA3cniAk=";
+  cargoLock = {
+    lockFile = ./Cargo.lock;
+    outputHashes = {
+      "service-manager-0.7.1" = "sha256-UetvoPlK+teFfulQonNJ+VQbcL5ur627o0W6VwDM/kA=";
+    };
+
+  };
+
+  # cargoHash = "sha256-/avdvHl7rfATGxHS5F1drK/J4pT+srX0+qRzA3cniAk=";
 
   meta = with lib; {
     description = "A simple, safe and decentralized VPN networking solution implemented with the Rust language and Tokio framework.";
