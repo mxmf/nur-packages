@@ -6,10 +6,9 @@
 
 rustPlatform.buildRustPackage rec {
 
-  doCheck = false;
 
   pname = "EasyTier";
-  version = "2.1.0";
+  version = "2.1.1";
 
 
 
@@ -18,19 +17,23 @@ rustPlatform.buildRustPackage rec {
     owner = "EasyTier";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-kPKCsKsTNT0vuESquILQJxBltP5MJ6/wKrPGx2g1Z78=";
+    sha256 = "sha256-qWICiY2g/wXT0Bt7lrCg7GgL1futOhelViB59UCLPro=";
   };
 
+  useFetchCargoVendor = true;
 
-  cargoLock = {
-    lockFile = ./Cargo.lock;
-    outputHashes = {
-      "service-manager-0.7.1" = "sha256-UetvoPlK+teFfulQonNJ+VQbcL5ur627o0W6VwDM/kA=";
-    };
+  cargoHash = "sha256-SpGW/RAbQUFdxqEKRPrTp5MXng7BLiSnofoJG8NsjsU=";
 
-  };
 
-  # cargoHash = "sha256-/avdvHl7rfATGxHS5F1drK/J4pT+srX0+qRzA3cniAk=";
+  # cargoLock = {
+  #   lockFile = ./Cargo.lock;
+  #   outputHashes = {
+  #     "service-manager-0.7.1" = "sha256-UetvoPlK+teFfulQonNJ+VQbcL5ur627o0W6VwDM/kA=";
+  #   };
+
+  # };
+
+  doCheck = false;
 
   meta = with lib; {
     description = "A simple, safe and decentralized VPN networking solution implemented with the Rust language and Tokio framework.";
