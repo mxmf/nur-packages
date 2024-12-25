@@ -20,18 +20,14 @@ rustPlatform.buildRustPackage rec {
     sha256 = "sha256-qWICiY2g/wXT0Bt7lrCg7GgL1futOhelViB59UCLPro=";
   };
 
-  useFetchCargoVendor = true;
 
-  cargoHash = "sha256-SpGW/RAbQUFdxqEKRPrTp5MXng7BLiSnofoJG8NsjsU=";
+  cargoLock = {
+    lockFile = ./Cargo.lock;
+    outputHashes = {
+      "service-manager-0.7.1" = "sha256-UetvoPlK+teFfulQonNJ+VQbcL5ur627o0W6VwDM/kA=";
+    };
 
-
-  # cargoLock = {
-  #   lockFile = ./Cargo.lock;
-  #   outputHashes = {
-  #     "service-manager-0.7.1" = "sha256-UetvoPlK+teFfulQonNJ+VQbcL5ur627o0W6VwDM/kA=";
-  #   };
-
-  # };
+  };
 
   doCheck = false;
 
