@@ -1,4 +1,7 @@
 { lib
+, clang
+, libclang
+, llvmPackages
 , rustPlatform
 , fetchFromGitHub
 , protobuf
@@ -8,26 +11,23 @@ rustPlatform.buildRustPackage rec {
 
 
   pname = "EasyTier";
-  version = "2.1.1";
+  version = "2.2.2";
 
+  nativeBuildInputs = [
+    protobuf
+    clang
+  ];
+  LIBCLANG_PATH = "${libclang.lib}/lib";
 
-
-  nativeBuildInputs = [ protobuf ];
   src = fetchFromGitHub {
     owner = "EasyTier";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-qWICiY2g/wXT0Bt7lrCg7GgL1futOhelViB59UCLPro=";
+    sha256 = "sha256-Heb2ax2yUuGmqzIjrqjHUL3QZoofp7ATrIEN27ZA/Zs=";
   };
 
-
-  cargoLock = {
-    lockFile = ./Cargo.lock;
-    outputHashes = {
-      "service-manager-0.7.1" = "sha256-UetvoPlK+teFfulQonNJ+VQbcL5ur627o0W6VwDM/kA=";
-    };
-
-  };
+  useFetchCargoVendor = true;
+  cargoHash = "sha256-U2ZK9GlfTjXsA7Fjd288YDlqSZNl3vHryLG1FE/GH5c=";
 
   doCheck = false;
 
