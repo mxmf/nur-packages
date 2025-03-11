@@ -18,6 +18,7 @@
   easytier = pkgs.callPackage ./pkgs/easytier { };
   trzsz-ssh = pkgs.callPackage ./pkgs/trzsz-ssh { };
   trzsz-go = pkgs.callPackage ./pkgs/trzsz-go { };
+  kd = pkgs.callPackage ./pkgs/kd { };
   touying = pkgs.python3Packages.callPackage ./pkgs/touying { };
   fake-bpy-module-4-2 = pkgs.python3Packages.callPackage ./pkgs/fake-bpy-module/fake-bpy-module-4-2.nix { };
 
