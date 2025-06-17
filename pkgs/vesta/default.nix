@@ -9,7 +9,7 @@
 , xorg
 , libGLU
 , gtk3
-, webkitgtk
+, webkitgtk_4_0
 , jdk
 }:
 
@@ -30,7 +30,7 @@ stdenv.mkDerivation rec
     };
 
   nativeBuildInputs =
-    [ autoPatchelfHook wrapGAppsHook makeWrapper glib gtk2 xorg.libXxf86vm libGLU gtk3 xorg.libXtst webkitgtk jdk ];
+    [ autoPatchelfHook wrapGAppsHook makeWrapper glib gtk2 xorg.libXxf86vm libGLU gtk3 xorg.libXtst webkitgtk_4_0 jdk ];
 
   unpackPhase = "tar -xf ${src}";
 
