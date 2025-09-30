@@ -15,7 +15,6 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   example-package = pkgs.callPackage ./pkgs/example-package { };
-  easytier = pkgs.callPackage ./pkgs/easytier { };
   trzsz-ssh = pkgs.callPackage ./pkgs/trzsz-ssh { };
   trzsz-go = pkgs.callPackage ./pkgs/trzsz-go { };
   kd = pkgs.callPackage ./pkgs/kd { };
